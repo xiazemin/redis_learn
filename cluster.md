@@ -184,3 +184,17 @@ b9d1569cc7b5f1bbc4294be3e3e5f7f4cd67bfbc 127.0.0.1:7005@17005 slave 89682e0e2d89
 redis-cli -p 7003 cluster replicate 7000的NodeID
 
 7002的NodeID 其实就是执行 redis-cli -p 7000 cluster nodes 命令出现的那一串 16 进制字符串
+
+
+
+
+Adding replica 127.0.0.1:7005 to 127.0.0.1:7001
+% redis-cli -c -p 7000
+127.0.0.1:7000> get test
+-> Redirected to slot [6918] located at 127.0.0.1:7001
+(nil)
+
+% redis-cli -c -p 7005
+127.0.0.1:7005> get test
+-> Redirected to slot [6918] located at 127.0.0.1:7001
+(nil)
