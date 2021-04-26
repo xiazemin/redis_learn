@@ -123,3 +123,5 @@ type ClusterOptions struct {
 如果ReadOnly = true 且 RouteByLatency = true 将从slot对应的Master Node 和 Slave Node选择，选择策略为: 选择PING 延迟最低的节点
 如果ReadOnly = true 且 RouteRandomly = true 将从slot对应的Master Node 和 Slave Node选择，选择策略为:随机选择
 
+http://vearne.cc/archives/1113
+
